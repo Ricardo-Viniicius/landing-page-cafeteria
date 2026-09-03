@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #763c28;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+header{
+    background-color: #2c1810;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links a:hover{
+    color: #c07a62;
+}
+
+.hero {
+    background: linear-gradient(rgba(44,24,16,0.7), rgba(44,24,16,0.7)),
+    url('https://images.unsplash.com/photo-1536227661368-deef57acf708?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+    center / cover no-repeat;
+    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-top: 60px;
+}
+
+.hero-conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-conteudo h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-conteudo p{
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: burlywood;
+    color: #2c1810;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: rgb(254, 207, 145);
+}
+
+.sobre{
+    padding: 5rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.sobre h2{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #763c28;
+}
+
+.sobre p{
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #2c1810;
+}
+
+.produtos{
+    padding: 5rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.produtos h2{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c1810;
+}
+
+.produtos-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produtos-card{
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    
+}
+
+.produtos-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.produto-img {
+   height: 200px;
+   overflow: hidden;
+   border-radius: 10px;
+   margin-bottom: 1.5rem;
+  
+}
+
+.produto-img img{
+    aspect-ratio: 16 / 9;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s;
+    
+}
+
+.preço{
+    font-weight: bold;
+    color: burlywood;
+    font-size: 1.5rem;
+}
+
+.localização{
+    padding: 5rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.localização h2{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #763c28; 
+}
+
+.contato-info{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mapa{
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mapa iframe{
+    display: flex;
+}
+
+footer{
+    text-align: center;
+    
+    color: #c07a62;
+}
+
+
+/* PARTE RESPONSIVA DO SITE PARA AJUSTAR A OUTROS TAMANHOS DE TELAS */
+@media(max-width: 768px){
+    .hero-conteudo h1{
+        font-size: 2.2rem;
+        text-align: center;    
+    }
+
+    .hero-conteudo p{
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .nav-bar{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links{
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .produtos-grid{
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px){
+    .sobre h2, .produtos h2, .localização h2{
+        font-size: 2rem;
+    }
+
+    .btn{
+        width: 90%;
+        text-align: center;
+    }
+
+    .produto-img{
+        height: 180px;
+    }
+}
