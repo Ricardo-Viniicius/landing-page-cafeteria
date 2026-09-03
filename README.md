@@ -1,7 +1,7 @@
 ☕ Projeto: Landing Page - Rick Coffee
 Este é um projeto desenvolvido para praticar a criação de interfaces modernas e atrativas. Trata-se de uma landing page institucional para a cafeteria Rick Coffee, criada para apresentar a marca, destacar o café artesanal e consolidar meus estudos em desenvolvimento web.
 
-![Preview do Projeto] (./preview.png)
+![Preview do Projeto](./preview.png)
 
 📝 Sobre o Projeto
 
